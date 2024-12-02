@@ -25,6 +25,10 @@ db.connect((err) => {
   }
 });
 
+app.get('/', (req, res) => {
+  res.redirect('/api/products');
+});
+
 // Create an API endpoint to fetch products
 app.get('/api/products', (req, res) => {
   const query = 'SELECT * FROM products'; // Query to fetch all products
