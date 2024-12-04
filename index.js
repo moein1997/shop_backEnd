@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 // Create an API endpoint to fetch products
 app.get('/api/products', (req, res) => {
-  const query = 'SELECT * FROM products'; // Query to fetch all products
+  const query = 'SELECT * FROM products_with_category'; // Query to fetch all products
   db.query(query, (err, results) => {
     if (err) {
       console.error('Error fetching products:', err.message);
